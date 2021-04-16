@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 600px;
+    background: hsl(203, 100%, 21%);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(210, 4%, 90%, 0.637), hsla(203, 100%, 21%, 0.533)), url(image00013.jpeg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(200, 6%, 90%, 0.432), hsla(203, 100%, 21%, 0.534)), url(image00013.jpeg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#ffffff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+.redes{
+    padding: 30px;
+}
+
+.sociales{
+    text-align: right;
+}
+
+header .textos-head{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-head h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-head h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.weve{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/*About us*/
+
+.Contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #00426b;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: left;
+}
+
+/* Galeria */
+
+.portafolio{
+    background: #ebe6e6;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: wrap;
+}
+
+.imagenes-port{
+    width: 24%;
+    margin-bottom: 10px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.imagenes-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /* transform: scale(0); */
+    background: #00426bd5;
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagenes-port:hover .hover-galeria{
+    transform: scale(0);
+}
+
+/* footer */
+
+footer{
+    background: #dad6d6;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex; 
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #00426b;
+    border-bottom: 3px solid #00426b;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #323638;
+}
+
+.titulo-final{
+    text-align: right;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+    color: #5b5c5e;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+    .Contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+        margin-bottom: 60px;
+    }
+}
